@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["patch", "digest", "pin", "pinDigest"],
+      "automerge": true,
+      "extends": ["schedule:weekly"],
+      "groupName": "path and digest dependencies"
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true,
+      "extends": ["schedule:weekly"],
+      "groupName": "minor-dependencies"
+    }
+  ],
+  "prCreation": "not-pending"
+}
