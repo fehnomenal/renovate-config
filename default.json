@@ -6,7 +6,7 @@
       "matchUpdateTypes": ["patch", "digest", "pin", "pinDigest"],
       "automerge": true,
       "extends": ["schedule:{{arg0}}"],
-      "groupName": "path and digest dependencies"
+      "groupName": "patch and digest dependencies"
     },
     {
       "matchUpdateTypes": ["minor"],
