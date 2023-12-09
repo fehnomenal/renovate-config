@@ -1,17 +1,18 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Auto-merge non-major dependencies in groups {{arg0}}",
   "packageRules": [
     {
       "matchUpdateTypes": ["patch", "digest", "pin", "pinDigest"],
       "automerge": true,
-      "extends": ["schedule:weekly"],
+      "extends": ["schedule:{{arg0}}"],
       "groupName": "path and digest dependencies"
     },
     {
       "matchUpdateTypes": ["minor"],
       "matchCurrentVersion": "!/^0/",
       "automerge": true,
-      "extends": ["schedule:weekly"],
+      "extends": ["schedule:{{arg0}}"],
       "groupName": "minor-dependencies"
     }
   ],
