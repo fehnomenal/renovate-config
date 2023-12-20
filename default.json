@@ -6,14 +6,14 @@
       "matchUpdateTypes": ["patch", "digest", "pin", "pinDigest"],
       "automerge": true,
       "extends": ["schedule:{{arg0}}"],
-      "groupName": "patch and digest dependencies"
+      "groupName": "non-major dependencies"
     },
     {
       "matchUpdateTypes": ["minor"],
       "matchCurrentVersion": "!/^0/",
       "automerge": true,
       "extends": ["schedule:{{arg0}}"],
-      "groupName": "minor-dependencies"
+      "groupName": "non-major dependencies"
     }
   ],
   "prCreation": "not-pending"
